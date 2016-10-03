@@ -1,1 +1,77 @@
-jackie
+ body{
+ 	background-color: #f6f6f6;
+}
+
+ #container{
+	width:1200px;
+	margin: 0 auto;
+/*	background-color: lightyellow;
+	border:1px dashed lightblue;*/
+}
+
+/*
+	A scene container class takes up 100% of the viewport (window) height
+	and resize automatically. Everything belonging to a scene, including the scene
+	itself, goes in here.
+*/
+.scene-container{
+	height:100vh;
+	background-color: pink;
+	border:3px solid lightblue;
+}
+
+/*
+	Each scene is vertically centered and adjusts based on its contents height.
+*/
+.scene{
+	position:relative;
+	top: 50%;
+	-webkit-transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
+	transform: translateY(-50%);
+}
+
+ /* 
+ 	Each scene has multiple panels.
+ */
+.panel{
+	padding:10px;
+	background-color: white;
+	border-radius: 5px;
+	position:relative;
+}
+
+/* Scenes */
+
+/* Scene 1 */
+#scene-1{
+
+} 
+
+#background-1{
+	width:100%;
+	height:100%;
+}
+
+#oreo-1{
+	position:absolute;
+	top:-100px;
+	left: 100px;
+	width: 450px;
+	height: 450px;
+}
+#panel-1-1{
+	height:800px;
+}
+/* Scene 2 */
+#scene-2{
+	
+} 
+#scene-5{
+
+}
+
+#background-5{
+	width:100%;
+	height:100%;
+}
