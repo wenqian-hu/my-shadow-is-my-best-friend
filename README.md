@@ -14,4 +14,4 @@ To visit the web page, open up a browser and type: 0.0.0.0:8000.
 
 To play the comics with sound (on Windows) - follow the following guide for setting up an HTTP server - http://www.jhh.me/blog/2012/12/24/setting-up-http-server-on-windows-with-node-js/.
 
-The reason why we need to start a server is because we are using the Web Audio API to fetch and play audio files. The Web Audio API gives us more control over the playback of audio elements over the native HTML5 <audio> tag.
+The reason why we need to start a server is because we are using the Web Audio API to fetch and play audio files. The Web Audio API also gives us more control (programmatically) over the playback of audio elements over the native HTML5 <audio> tag.
