@@ -17,3 +17,19 @@ To play the comics with sound (on Windows) - follow the following guide for sett
 The reason why we need to start a server is because we are using the Web Audio API to fetch and play audio files. The Web Audio API also gives us more control (programmatically) over the playback of audio elements over the native HTML5 <audio> tag.
 
 Read more about the Web Audio API: https://www.html5rocks.com/en/tutorials/webaudio/intro/
+
+**Some basic implementation notes**
+
+The basic layout for every scene is the following HTML code:
+```html
+	<!-- scene zero -->
+		<div class="scene-container" id="scene-0">
+			<div class="scene col-md-12" >
+				<div class="panel" id="panel-0-1">
+				<img id="oreo-0" src="images/0.png">
+				</div>
+			</div>
+		</div>
+```
+
+Each scene has a .scene-container class which takes up 100% of the viewport screen as well as an id identifying the unique scene. A scene container then has a .scene class which represents the actual scene and is vertically aligned in the middle. Each scene also takes up 100% of the width of the parent container (through bootstrap's grid system and its .col-md-12 class). Each scene can have multiple panels, with each panel having a .panel class, which functions to add a border / frame to each panel. Two panels can be side-by-side each other by applying the correct bootstrap column classes (i.e. .col-md-6 to both). Finally, content inside each panel can be styled at discretion.
