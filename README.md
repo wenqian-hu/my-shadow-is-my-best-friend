@@ -33,3 +33,8 @@ The basic layout for every scene is the following HTML code:
 ```
 
 Each scene has a .scene-container class which takes up 100% of the viewport screen as well as an id identifying the unique scene. A scene container then has a .scene class which represents the actual scene and is vertically aligned in the middle. Each scene also takes up 100% of the width of the parent container (through bootstrap's grid system and its .col-md-12 class). Each scene can have multiple panels, with each panel having a .panel class, which functions to add a border / frame to each panel. Two panels can be side-by-side each other by applying the correct bootstrap column classes (i.e. .col-md-6 to both). Finally, content inside each panel can be styled at discretion.
+
+Each scene is revealed by using ScrollReveal's API inside the main script file. Most of the control of the comics animation, sounds, and display is nested within the ScrollReveal's default callbacks -- namely, beforeReveal, afterReveal, beforeReset, and afterReset. For more information, see the documentation: https://github.com/jlmakes/scrollreveal.
+
+For example, a animation only starts after a scene is revealed (in which the afterReveal callback is run -- running the animation function) and the animation is reset after a scene is about to fade away (the beforeReset callback). 
+
