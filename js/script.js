@@ -18,7 +18,11 @@ function init() {
     bufferLoader.load();
 }
 
-var Rain = {};
+var Rain = {
+    play: function () {},
+    stop: function () {}
+};
+
 
 function finishedLoading(bufferList) {
 
@@ -36,8 +40,9 @@ function finishedLoading(bufferList) {
         this.source = source;
         this.gainNode = gainNode;
     };
+
     Rain.stop = function() {
-    	this.gainNode.gain.exponentialRampToValueAtTime(0.01, context.currentTime + 5);
+        this.gainNode.gain.exponentialRampToValueAtTime(0.01, context.currentTime + 5);
     }
 
 }
@@ -53,7 +58,7 @@ sr.reveal('#scene-0', {
 });
 
 /*
-	Scene 1
+    Scene 1
 */
 sr.reveal('#scene-1', {
     viewFactor: 0.5
@@ -95,7 +100,7 @@ sr.reveal('#scene-1-1', {
 
 
 /*
-	Scene 2
+    Scene 2
 */
 sr.reveal('#scene-2', {
     viewFactor: 0.5,
@@ -133,7 +138,7 @@ sr.reveal('#scene-2', {
 
 
 /*
-	Scene 3
+    Scene 3
 */
 sr.reveal('#scene-3', {
     viewFactor: 0.5
@@ -141,7 +146,7 @@ sr.reveal('#scene-3', {
 
 
 /*
-	Scene 4
+    Scene 4
 */
 var scene4Start = false;
 
@@ -154,7 +159,7 @@ sr.reveal('#scene-4', {
     },
 
     afterReveal: function() {
-    	Rain.play();
+        Rain.play();
     },
 
     beforeReset: function() {
@@ -228,35 +233,35 @@ if (canvas.getContext) {
 }
 
 /*
-	Scene 5
+    Scene 5
 */
 sr.reveal('#scene-5', {
     viewFactor: 0.5
 });
 
 /*
-	Scene 6
+    Scene 6
 */
 sr.reveal('#scene-6', {
     viewFactor: 0.5
 });
 
 /*
-	Scene 7
+    Scene 7
 */
 sr.reveal('#scene-7', {
     viewFactor: 0.5
 });
 
 /*
-	Scene 8
+    Scene 8
 */
 sr.reveal('#scene-8', {
     viewFactor: 0.5
 });
 
 /*
-	Scene 9
+    Scene 9
 */
 sr.reveal('#scene-9', {
     viewFactor: 0.5
